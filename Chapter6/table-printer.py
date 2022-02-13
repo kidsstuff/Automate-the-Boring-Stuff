@@ -6,6 +6,7 @@ def printTable(tableData):
             if len(data) > maxLength:
                 maxLength = len(data)
         colWidths[i] = maxLength
+
     for j in range(len(tableData[0])):
         for i in range(len(tableData)):
             print(tableData[i][j].rjust(colWidths[i]), end=' ')
