@@ -34,7 +34,7 @@ def isValidChessboard(board):
                     return False
 
         except Exception:
-            print("Error")
+            print("Excepton error")
             return False
     return True
 
@@ -43,9 +43,13 @@ def checkPiece(pieces, piece, maxNumber):
     return pieces[piece] > maxNumber
 
 # Tests
-chessBoard1 = {"1h": "bking", "6c": "wqueen", "2g": "bbishop", "5h": "bqueen", "3e": "wking"}
-chessBoard2 = {"1h": "bking", "6c": "wqueen", "2i": "bbishop", "5h": "bqueen", "3e": "wking"}
-chessBoard3 = {"1h": "bking", "6c": "bking", "2g": "bbishop", "5h": "bqueen", "3e": "wking"}
-print(isValidChessboard(chessBoard1))
-print(isValidChessboard(chessBoard2))
-print(isValidChessboard(chessBoard3))
+board1={'1h': 'bking', '6c': 'wqueen', '2g': 'bbishop', '5h': 'bqueen', '3e': 'wking', '3a': 'wpawn'}
+board2={'1h': 'bking', '6c': 'queen', '2g': 'bbishop', '5h': 'bqueen', '3e': 'wking', '3a': 'pawn'}
+board3={'1h': 'bking', '6c': 'wqueen', '2g': 'bbishop', '5h': 'bqueen', '3e': 'wking', '3a': 'wpawn', '3c': 'wking'}
+board4={'1h': 'bking', '6c': 'wqueen', '2g': 'bbishop', '5h': 'bqueen', '3e': 'wking', '3a': 'wpawn', '3c': 'wpawn', '9z': 'wpawn'}
+board5={'1h': 'bking', '6c': 'wqueln', '2g': 'bbishop', '5h': 'bqueen', '3e': 'wking', '3a': 'wpawn'}
+print("board1:" + str(isValidChessboard(board1)))
+print("board2:" + str(isValidChessboard(board2)))
+print("board3:" + str(isValidChessboard(board3)))
+print("board4:" + str(isValidChessboard(board4)))
+print("board5:" + str(isValidChessboard(board5)))
