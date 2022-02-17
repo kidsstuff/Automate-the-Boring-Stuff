@@ -9,7 +9,7 @@ def selectiveCopy(source, destination, extension):
     for foldername, subfolders, filenames in os.walk(source):
         for filename in filenames:
             if Path(filename).suffix == extension:
-                print(foldername, filename)
+                print(f'Copying {filename} from {foldername} to {destination}')
                 shutil.copy(Path(foldername) / filename, destination)
 
 if len(sys.argv) == 4:
